@@ -1,0 +1,30 @@
+body{
+    background: linear-gradient(to right, #020024, #140808,#1d5c67);
+    color: white;
+}
+
+.main-top {
+    width: 80%;
+    margin: 4% 10%;
+    text-align: center;
+    background: rgba(255, 255, 255, .3);
+    border: 1px solid silver;
+    border-radius: 40px;
+}
+
+.main-top div {
+    margin: 3%;
+}
+
+.main-topLeft {
+
+}
+
+.main-topRight {
+
+}
+
+.main-topRight iframe {
+    width: 55%;
+    height: 300px;
+}

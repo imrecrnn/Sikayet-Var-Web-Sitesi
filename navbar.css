@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background: linear-gradient(to left, #020024, #140808,#1d5c67);
+}
+
+.navbar-brand {
+    padding-top: 0;
+}
+
+.navbar #menu a {
+    color: white !important;
+}
+
+.navbar #menu a:hover {
+    background: #277785;
+}
+
+.navbar-header a:hover {
+    background: #1d5c67 !important;
+}
+
+.navbar #menu a:active {
+    background: #277785;
+}
+
+#navigasyon #aktif a {
+    background: #277785 !important;
+}
+
+.dropdown ul {
+    background: #020024;
+}
+
+#login {
+    float: right;
+    padding-top: 6px;
+}
+
+.header_right {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 14px;
+    margin-left: 480px;
+    float: right;
+}
+
+#login svg {
+    width: 15px;
+    position: relative;
+    top: 8px;
+}
+
+#login a {
+    padding: 0;
+}
+
+#logout svg {
+    width: 15px;
+    position: relative;
+    top: 8px;
+}

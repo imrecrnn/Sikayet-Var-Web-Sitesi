@@ -1,0 +1,123 @@
+footer {
+    height: 30%;
+    padding-bottom: 2%;
+    background: #140808;
+    color: rgba(231, 231, 231, 0.7);
+}
+
+.footer-logo {
+    padding: auto 0;
+    font-size: larger;
+}
+
+.footer-logo img {
+    width: 50px;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgba(231, 231, 231, 0.7);
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: rgba(231, 231, 231, 0.7);
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+.footer-contact-social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-contact-social-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #140808;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    transition: all .5s;
+}
+
+.instagram-logo {
+    background: rgba(231, 231, 231, 0.7);
+}
+
+.twitter-logo {
+    background: rgba(231, 231, 231, 0.7);
+}
+
+.facebook-logo {
+    background: rgba(231, 231, 231, 0.7);
+}
+
+.linkedin-logo {
+    background: rgba(231, 231, 231, 0.7);
+}
+
+.footer-contact-social-btn a:hover {
+    transform: scale(1.1);
+    opacity: .8;
+}
+
+.footer-divider {
+    width: 23%;
+    margin-left: 38.5%;
+    color: rgba(231, 231, 231, 0.7);
+}
+
+.footer-sss {
+    margin: 20px 20px;
+    padding: 25px 20px;
+}
+
+.footer-sss h2 {
+    margin: 5px 10px;
+}
+
+.footer-sss p {
+    margin: 10px 30px;
+    font-size: larger;
+}
+
+.footer-sos {
+    color: #1d5c67;
+}
+
+.footer-sos:hover {
+    color: #1d5c67;
+}
+
+.corporation {
+    margin-left: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.corporation svg {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 35px;
+    left: 20px;
+    color: rgba(231, 231, 231, 0.7);
+    width: 18px;
+    height: 18px;
+    border: 1px solid rgba(231, 231, 231, 0.7);
+    border-radius: 100px;
+}

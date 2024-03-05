@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikayetimcom | Login Page</title>
+    <link rel="icon" type="image" href="media/sikayetimcom2.png">
+    <script type="text/JavaScript" src="form.js"></script>
+    <script type="text/JavaScript" src="giris_kayit.js" defer></script>
+    <script src="kullanim_disi.js"></script>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        .loading {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: auto;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            float: center;
+            display: flex;
+            cursor: alias;
+            background: rgba(255, 255, 255, .7);
+            animation: fade 2s ease-in 0s;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        @keyframes fade {
+            100% {
+                opacity: 1;
+            }
+
+            0% {
+                opacity: 0;
+            }
+        }
+
+        .simge {
+            animation: simge .5s infinite alternate linear;
+        }
+
+        @keyframes simge {
+            from {
+                transform: scale(.7);
+
+            }
+
+            to {
+                transform: scale(1);
+
+            }
+
+        }
+    </style>
+    <script>
+        var form = document.forms["form"];
+        var radio = form.radio
+
+        if (radio.value == firma) {
+            $("#form").removeAttr("action");
+            $("#form").attr("action", "anasayfaFirma.html")
+
+        } 
+        
+        if (radio.value == musteri) {
+            $("#form").attr("action", "anasayfaSignly.html");
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div class="loading">
+        <img class="simge" src="media/sikayetimcom2.png" alt="Resim yok :(">
+    </div>
+
+    <a href="anasayfaSignless.html" id="goHome">Üye olmadan devam et..</a>
+
+    <div class="login-card-conteiner">
+        <div class="login-card"> 
+            <div class="login-card-logo">
+                <img src="media/sikayetimcom2.png" alt="Resim yok :(">
+            </div>
+            <div class="login-card-header">
+                <marquee behavior="left" direction="right">Hoşgeldiniz..</marquee>
+            </div>
+            <form action="anasayfaSignly.html" method="get" name="form" id="form" onsubmit="return gecerli()">
+                <div class="login-card-form">
+                    <div class="form-item">
+                        <input type="text" name="email" required>
+                        <span class="form-item-icon material-symbols-outlined">mail</span>
+                        <div class="label">E-posta</div>
+                        <div id="email_error">Lütfen bu alanı doldurunuz!</div>
+                    </div>
+                    <div class="form-item">
+                        <input type="password" name="password" required>
+                        <span class="form-item-icon material-symbols-outlined">lock</span>
+                        <div class="label">Şifre</div>
+                        <div id="pass_error">Lütfen bu alanı doldurunuz!</div>
+                    </div>
+                    <div class="form-item-other">
+                        <div class="form-item-other">
+                            <div class="checkbox">
+                                <input type="checkbox" id="remember_me_check_box_" checked>
+                                <label for="remember_me_check_box_">Beni Hatırla</label>
+                            </div>
+                        </div>
+                        <a href="#" onclick="kullanilmiyor()">Şifremi unuttum</a>
+                        <div class="radio">
+                            <input type="radio" name="prs" id="firma" value="firma" checked="checked">Firma
+                            <input type="radio" name="prs" id="musteri" value="musteri">Müşteri
+                        </div>
+                    </div>
+                    <button id="giris" type="submit">Giriş</button>
+            </form>
+            <div class="form-card-footer">
+                Henüz hesabın yok mu? <a href="signin.html">Şimdi kayıt ol</a>
+            </div>
+            <div class="login-card-social">
+                <div>Ya da şunları kullan:</div>
+                <div class="login-card-social-btn">
+                    <a class="facebook-logo" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="google-logo" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M17.788 5.108a9 9 0 1 0 3.212 6.892h-8"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+body {
+    background: linear-gradient(to right, #020024, #140808,#1d5c67);
+}
+
+.main {
+    width: 80%;
+    margin: 5% 10%;
+}
+
+.sikayet-ekle {
+    margin-top: 4%;
+    margin: 3% 5%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid silver;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, .3);
+}
+
+#sikayet, #cevap {
+    font-size: x-large;
+    margin: 5% 5% 1% 5%;
+    padding: 5%;
+    width: 90%;
+    height: max-content;
+    display: flex;
+    background: rgba(255, 255, 255, .7);
+    border: none;
+    border-radius: 40px;
+}
+
+#sikayet:focus {
+    background: white;
+}
+
+button {
+    font-size: larger;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin:0 25% 3% 25%;
+    padding: 5px;
+    display: flex;
+    border: none;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, .7);
+}
+
+button:hover {
+    background: rgba(255, 255, 255, .9);
+}
+
+button a {
+    color: black !important;
+}
+
+button a:hover {
+    text-decoration: none;
+}

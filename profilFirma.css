@@ -1,0 +1,170 @@
+body {
+    background: linear-gradient(to right, #020024, #140808, #1d5c67);
+}
+
+.main {
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar {
+    background: rgba(255, 255, 255, .3);
+    color: white;
+    height: 100%;
+}
+
+.sidebar a, #settings {
+    margin-left: 3%;
+    display: block;
+    color: white;
+    padding-bottom: 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.sidebar a:hover, #settings:hover {
+    text-decoration: underline;
+}
+
+#settings {
+    float: center !important;
+    position: static;
+    cursor: pointer;
+}
+
+.switch {
+    display: none;
+}
+
+#switchRemain {
+    display: grid !important;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    width: 60px;
+    height: 26px;
+    position: relative;
+    cursor: pointer;
+    top: 0;
+    left: 42%;
+    right: 0;
+    bottom: 0;
+    background: rgba(59, 59, 59, 0.7);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+ .slider {
+    background-color: rgba(184, 184, 184, 0.7);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(34px);
+    -ms-transform: translateX(34px);
+    transform: translateX(34px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+button {
+    border: none;
+    background: none;
+    position: relative;
+    top: -15px;
+    right: 0;
+    float: right;
+    display: block;
+    color: #140808;
+    padding-bottom: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+.card-body .pp {
+    width: 100px;
+    height: 100px;
+    margin: 5% 37.5%;
+    overflow: hidden;
+    border: 1px solid silver;
+    border-radius: 100px;
+    background: white;
+}
+
+.card-body .pp img {
+    width: 80px;
+    height: 60px;
+    position: relative;
+    top: 15px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    background: rgba(255, 255, 255, .7);
+    padding: 5%;
+}
+
+.input {
+    width: 63%;
+    height: 27px;
+    padding: 5px;
+    background: none;
+    border: none;
+    border-radius: 16px;
+}
+
+#inputRemain {
+    width: 63% !important;
+    height: 27px !important;
+    padding: 5px !important;
+    cursor: text !important;
+    border: 1px solid silver !important;
+    border-radius: 16px !important;
+    color: #140808 !important;
+    background: rgba(255, 255, 255, .9) !important;
+}
+
+#kaydet {
+    display: none;
+}
+
+.kaydetVar {
+    display: block !important;
+}

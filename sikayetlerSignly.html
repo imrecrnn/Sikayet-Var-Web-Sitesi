@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <title>Sikayetimcom | Şikayetler</title>
+    <link rel="icon" type="image" href="media/sikayetimcom2.png">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="sikayetler.css">
+    <link rel="stylesheet" href="footer.css">
+    <script type="text/JavaScript" src="logout.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style> 
+        .loading {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: auto;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            float: center;
+            display: flex;
+            cursor: alias;
+            background: rgba(255, 255, 255, .7);
+            animation: fade 2s ease-in 0s;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        @keyframes fade {
+            100% {
+                opacity: 1;
+            }
+
+            0% {
+                opacity: 0;
+            }
+        }
+
+        .simge {
+            animation: simge .5s infinite alternate linear;
+        }
+
+        @keyframes simge {
+            from {
+                transform: scale(.7);
+
+            }
+
+            to {
+                transform: scale(1);
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading">
+        <img class="simge" src="media/sikayetimcom2.png" alt="Resim yok :(">
+    </div>
+
+    <div class="container">
+        <div class="navbar navbar-default">
+            <!-- navbar'ın içinde bir container-fluid olması gerekiyor. -->
+            <div class="container-fluid" id="menu">
+                <div class="navbar-header">
+                    <!-- Sayfa daralınca görünecek menü simgeli buton -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar-content">
+                        <!-- Butonun içindeki 3 çizgi için -->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Navigasyon çubuğunun başlığı, site adı vs. -->
+                    <a class="navbar-brand" href="index.html" title="Sikayetimcom"><img width="50px"
+                            src="media/sikayetimcom2.png" alt="Resim yok :("></a>
+                </div>
+                <!--Header ile aynı düzeyde, navigasyon link'lerinin görüneceği içerik -->
+                <div class="collapse navbar-collapse" id="mynavbar-content">
+                    <ul class="nav navbar-nav" id="navigasyon">
+                        <li><a href="anasayfaSignly.html">Ana Sayfa</a></li>
+                        <li><a href="deneyimSignly.html">Deneyim Raporları</a></li>
+                        <li class="active" id="aktif"><a href="sikayetlerSignly.html">Şikayetler</a></li>
+                        <li>
+                            <div class="header_right">
+                        <li><a href="yardimSignly.html">? Yardım</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Profil Bilgisi<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="profil.html">Profilim</a></li>
+                                <li><a href="sikayetlerim.html">Şikayetlerim</a></li>
+                                <li class="divider"></li>
+                                <li><a class="logout" href="anasayfaSignless.html">Çıkış Yap <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-logout" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path
+                                                d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2">
+                                            </path>
+                                            <path d="M7 12h14l-3 -3m0 6l3 -3"></path>
+                                        </svg></a></li>
+                            </ul>
+                        </li>
+                </div>
+                </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+
+    <div class="main-header">
+        <input type="search" id="" placeholder="Ara..">
+        <a href="sikayet_ekle.html"><button>+ Şikayet Yaz</button></a>
+    </div>
+
+
+
+    <div class="main">
+        <div class="conteiner-box">
+            <div class="conteiner1">
+                <div class="sorun">
+                    <h2>Ayda</h2>
+                    <h1>Trendyol şanslı çekiliş yanıltmacası</h1>
+                    <p>Şanslı çekilişten ben de sürüyle bilet aldım. Maalesef kazanamadınız ibaresi benim şansım
+                        olabilir ama kazananların isimleriyle, ödüllerini teslim aldıkları anın görüntüleriyle
+                        açıklanmasını istiyorum mercilerden. Çok araştırdım. Ancak hiçbir yerde Trendyol ödül teslimi
+                        ile ilgili bir bilgi, görüntü vs yok. Bu şanslı çekilişin bir yanıltmaca olduğunu düşünmeye
+                        başladım artık. Trendyol yetkilileri ya bu kusurunuzu düzeltin ya da herkesten çekiliş adıyla
+                        topladığınız meblağları iade edin. Çünkü savcılığa suç duyurusu sürecinin başlamasına az kaldı.
+                    </p>
+                </div>
+                <div class="cozum">
+                    <h1 style="color: rgb(204, 0, 0);">Henüz cevaplanmadı!</h1>
+                </div>
+            </div>
+            <div class="conteiner2">
+                <div class="sorun">
+                    <h2>Faruk</h2>
+                    <h1>Bilgi Teknolojileri Kurumu (BTK) Yurt Dışı Telefonu Kayıt Ettim Servis Yok Hatası Alıyorum
+                        Bilgisi Olan</h1>
+                    <p>
+                        13.12.2022 Tarihinde Yurt Dışına Giriş Çıkış Yaptım Yeni Aldığım Telefonu Kayıt Edebilmem İçin.
+                        20.12.2022 Tarihinde IMEI Kaydetme İşlemini Gerçekleştirdim.
+                        Telefonun Servisin tabii ki Hemen geleceğini Düşünmüyordum Biraz Vakit Geçtikten Sonra Gelir
+                        Dedim.
+                        BTK'yı Arayıp Ulaşamadım maalesef.
+                        Aynı Sıkıntıyı Yaşayan Binlerce İnsan Var.
+                        Eğer Bilen Biri Varsa Yardımcı Olabilir Mi?
+                        Bu İşlem Kaç Gün Veya Kaç Saat Sürdüğünü
+                    </p>
+                </div>
+                <div class="cozum">
+                    <h1 style="color: rgb(0, 161, 0);">Çözüldü!</h1>
+                </div>
+            </div>
+            <div class="conteiner3">
+                <div class="sorun">
+                    <h2>Damla</h2>
+                    <h1>Aile ve Sosyal Hizmetler Bakanlığı Aile Destek Programı Desteği Para Yatmadı</h1>
+                    <p>Ben de Aile Destek Programından yardım aldım Üstelik e-devlette de kabul edildi olarak gözüküyor.
+                        Yetkili yerleri de aradım fakat kabul edildi Onaylanmış olarak gözüküyor ama hesapta para yoktu
+                        Ben para yatırılmadı neden diye sordum bunda bizim de bildiğimiz yok dediler ve bayramdan önce
+                        yatacağını söylediler Ama hala yatmadı.</p>
+                </div>
+                <div class="cozum">
+                    <h1 style="color: rgb(0, 161, 0);">Çözüldü!</h1>
+                    <p>“Yatırdılar teşekkür ederim”</p>
+                </div>
+            </div>
+            <div class="conteiner4">
+                <div class="sorun">
+                    <h2>Yasemin</h2>
+                    <h1>Milli Eğitim Bakanlığı (MEB) Fazla İstenen Direksiyon Sınav Ücreti</h1>
+                    <p>Sakarya da bir sürücü kursuna yazıldım ve ilk direksiyon sınavında başarısız oldum. Dün kurs
+                        yerinden mesaj attılar 2. Sınav için 2 saat direksiyon dersi+sınav ücreti 850 TL isteniyor ve
+                        parantez içinde yeni yılda artarsa ek ücret talep edilecektir yazılmış. Netten bakıyorum
+                        uygulama şu: "Direksiyon sınavına katılıp başarısız olan adaylar, kursların Milli Eğitim
+                        Müdürlüklerine bildirdikleri ücret üzerinden 2 saat direksiyon dersi 400 TL. Ve sınav harcı 160
+                        TL. Olup 2022 yılı için Toplam 560 TL. Kursa ödeme yapılacaktır." Benim gittiğim kurs daha yıl
+                        bitmeden kafasına göre fiyat arttırmış bir de ek ücret talebine de şimdiden hazırlıyor
+                        insanları.
+                    </p>
+                </div>
+                <div class="cozum">
+                    <h1 style="color: rgb(204, 0, 0);">Henüz cevaplanmadı!</h1>
+                </div>
+            </div>
+            <div class="conteiner5">
+                <div class="sorun">
+                    <h2>Nazli</h2>
+                    <h1>Yayalar Hukuk Mağdurum Yardımcı Olur Musunuz</h1>
+                    <p>. Bana global satıştan bir mesaj geldi sayın dosyamız icra takibi başlatılması üçün Kuk ofisine
+                        devredilmiştir yayalar hukuk bürosu 0 212 935 31 36. Elime ulaşmayan bir kargo nedeniyle 120 TL
+                        para cezası gelmiş bana ve elime ulaşmadı müddetçe sorumlusu ben değilim lütfen bu konuyu bir an
+                        önce çözün.</p>
+                </div>
+                <div class="cozum">
+                    <h1 style="color: rgb(0, 161, 0);">Çözüldü!</h1>
+                    <p>“Teşekkür ediyorum”</p>
+                </div>
+            </div>
+            <div class="conteiner6">
+                <div class="sorun">
+                    <h2>Kübra</h2>
+                    <h1>Dilan Polat Estetik Lazer Randevuların Dolu Olması, Hizmet Alamama</h1>
+                    <p>Dilan polat Ataşehir'den almış olduğum lazer epilasyon hizmetini randevuların dolu olması
+                        nedeniyle bir türlü alamıyorum. Kapasitenize bakmadan insanlara kampanyalarla paket paket hizmet
+                        satıp sonra da yoğunluğu bahane ediyorsunuz. Randevular doluysa iptal edilen randevular yerine
+                        alın diyorum onun için her gün benim takip etmemi söylüyorsunuz işi gücü bırakıp her gün söz
+                        konusu işletmeyi arıyorum. Hizmet satın alırken bu durumu göz önüne almanızı tavsiye ederim.
+                        Mesele hizmeti satmak değil vermek.</p>
+                </div>
+                <div class="cozum">
+                    <h1 style="color: rgb(204, 0, 0);">Henüz cevaplanmadı!</h1>
+                </div>
+            </div>
+            <div class="conteiner7">
+                <div class="sorun">
+                    <h2>Aslı</h2>
+                    <h1>Tarım ve Orman Bakanlığı Kedilere Tarım İlçe Müdürlüklerinden Çip Taktırma</h1>
+                    <p>Tarım il müdürlüklerinde kedi için çip taktırma randevu sistemi ®. Arayıp randevu alınamıyor
+                        internet üzerinden randevu alınamıyor ama müdürlüklere gittiğinde randevululara takıyoruz
+                        deniliyor. Ama randevu nereden kimden alınıyor kendi personellerinden bile bilen yok.</p>
+                </div>
+                <div class="cozum">
+                    <h1 style="color: rgb(204, 0, 0);">Henüz cevaplanmadı!</h1>
+                </div>
+            </div>
+            <div class="conteiner8">
+                <div class="sorun">
+                    <h2>Mustafa</h2>
+                    <h1>SGK Askerlik Borçlanması EYT Yapar.</h1>
+                    <p>Askerden sonra sigortalı olanlar borçlanarak sigorta başlangıcını öne çeker ve EYT li yapar bu
+                        kanunun değişmesine izin verilmemeli herkes için adalet. Vatan eşittir askerlik. Bu durum derhal
+                        düzeltilmeli. İnsanı askerlikten soğutmayın. Bu kanunsuzluğu giderin.</p>
+                </div>
+                <div class="cozum">
+                    <h1 style="color: rgb(204, 0, 0);">Henüz cevaplanmadı!</h1>
+                </div>
+            </div>
+            <div class="conteiner9">
+                <div class="sorun">
+                    <h2>Mert</h2>
+                    <h1>Nüfus ve Vatandaşlık İşleri Pasaport Neredesin... Acil Gelmesi Gerekiyor</h1>
+                    <p>05/12/2022 tarihinde pasaport için başvuruda bulundum halen basım öncesi kontrol aşamasındadır
+                        deniliyor pasaportun gelmesi gerekiyor şimdiden uçak bileti aldım vize işlemleri için pasaportun
+                        en geç 27-12-2022 tarihinde elimde olması gerekiyor. Yardıma muhtacız...</p>
+                </div>
+                <div class="cozum">
+                    <h1 style="color: rgb(0, 161, 0);">Çözüldü!</h1>
+                    <p>“Sonuçtan memnun kaldım”</p>
+                </div>
+            </div>
+            <div class="conteiner10">
+                <div class="sorun">
+                    <h2>Faruk</h2>
+                    <h1>TürkTelekom yeni çıkan iletişim sözleşmesi</h1>
+                    <p>TürkTelekom isimli firma son zamamlarda atmış olduğu mesajlarda iletişim
+                        sözleşmesine göre abonelik belgemin eksik olduğunu iddia ederek hattımı kapattırdı. Böyle
+                        bir
+                        şeyin meydana geleceğini tahmin etmem çok zor çünkü abone olmadan hattı nasıl kullanayım.
+                        Gerçekten komiklik derecesinde bir acziyet. Her şeye olduğu gibi tabii ki buna da arıza
+                        kaydı
+                        oluşturdular :)</p>
+                </div>
+                <div class="cozum">
+                    <h1 style="color: rgb(204, 0, 0);">Henüz çözüme kavuşmadı!</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-logo">
+            <a href="anasayfa.html"><img src="media/sikayetimcom2.png" alt="Resim yok :(">| Sikayetimcom</a>
+        </div>
+        <div class="footer-contact">
+            <div class="footer-contact-social-btn">
+                <a href="#" class="instagram-logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <line x1="16.5" y1="7.5" x2="16.5" y2="7.501"></line>
+                    </svg>
+                </a>
+                <a href="#" class="twitter-logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                            d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z">
+                        </path>
+                    </svg>
+                </a>
+                <a class="facebook-logo" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3">
+                        </path>
+                    </svg>
+                </a>
+                <a class="linkedin-logo" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                        <line x1="8" y1="11" x2="8" y2="16"></line>
+                        <line x1="8" y1="8" x2="8" y2="8.01"></line>
+                        <line x1="12" y1="16" x2="12" y2="11"></line>
+                        <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-sss">
+            <h2>Sıkça Sorulan Sorular</h2>
+            <p>Merak ettiklerinizi bizimle <u title="sikayetimcom@info.com.tr">mail</u> üzerinden paylaşabilirsiniz.
+                Diğer konularla ilgili <a href="yardim.html" target="_blank" class="footer-sos">yardım</a> sayfamızı
+                ziyaret edebilirsiniz.
+            </p>
+        </div>
+        <div class="corporation">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-coinbase" width="24"
+                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                    d="M12.95 22c-4.503 .001 -8.445 -3.04 -9.61 -7.413c-1.165 -4.373 .737 -8.988 4.638 -11.25a9.906 9.906 0 0 1 12.008 1.598l-3.335 3.367a5.185 5.185 0 0 0 -7.354 .013a5.252 5.252 0 0 0 0 7.393a5.185 5.185 0 0 0 7.354 .013l3.349 3.367a9.887 9.887 0 0 1 -7.05 2.912z">
+                </path>
+            </svg>
+            <b>2022 Sikayetimcom. Her hakkı saklıdır.</b>
+        </div>
+    </footer>
+
+</body>
+
+</html>
